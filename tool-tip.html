@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .header{
+            position: absolute;
+            
+            background-color: red;
+            cursor: pointer;
+            border-radius: 5px;
+            
+        }
+        .Tool-tip{
+            position: relative;
+            background-color: rgb(21, 17, 17);
+            
+           
+            cursor: pointer;
+            opacity: 0;
+            bottom: -20;
+            &:hover{
+                opacity: 1;
+                background-color: rgb(243, 154, 154);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        Tool tip hover me
+        <div class="Tool-tip">Tip me here</div>
+           
+        
+    </div>
+    
+</body>
+</html>

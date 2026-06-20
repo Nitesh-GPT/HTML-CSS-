@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .header{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding-top: 15px;
+            
+
+        }
+        .search-add{
+            display: flex;
+            flex-direction: row;
+
+            
+        
+        }
+        .search-add, input{
+            flex: 1;
+            
+
+        }
+        .bar-men{
+            display: flex;
+            margin-left: 10px;
+            margin-right: 15px;
+
+        }
+        .Dn-Dp{
+            display: flex;
+            align-items: center;
+        }
+        .Dp{
+            border-radius: 95%;
+            width: 50px
+        }
+        .Down{
+           
+        }
+        .bar{
+             width: 30px;
+             height: 30px;
+        }
+        .men{
+            width: 30px;
+            height: 30px;
+        }
+        input::shadow{
+            inset: 2.0;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="contain-profiles">
+    <div class="header">
+        <div class="bar-men">
+            <img class="bar" src="/images/bars.svg" alt="">
+            <img class="men" src="/images/men.svg" alt="">
+        </div>
+        <div class="search-add">
+             <input type="text" placeholder="Search-Box">
+             <button>
+                <img src="/images/search.svg" alt="">
+            </button>
+             <button>
+                <img src="/images/heartplus.svg" alt="hrart-plus">
+             </button>
+        </div>
+        <div class="Dn-Dp">
+             <button style="border-radius: 8px; border: none;">
+                <img class="Down" src="/images/download.svg" alt="Downloads">
+            </button>
+            <button style="border: none; border-radius: 60%;">
+                <img class="Dp" src="/images/channel.jpg" alt="">
+            </button>
+
+        </div>
+        <div>
+
+        </div>
+        
+    </div>
+    </div>
+    
+</body>
+</html>
