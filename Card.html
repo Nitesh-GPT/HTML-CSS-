@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Card.css">
+</head>
+<body>
+    <h1>Timer Clock</h1>
+    <div class="container">
+        
+        <div class="time"></div>
+        <button onclick="Start()">Start</button>
+        <button onclick="Restart()">Restart</button>
+        <button onclick="Pause()">Pause</button>
+    </div>
+    <script>
+        let Starting = 10;
+        let Interval;
+        let truth = false;
+        Interval = setInterval(Start, 1000);
+
+       function Start (){
+        if(Starting <= 0){
+            clearInterval(Interval);
+            document.querySelector(".time").innerHTML="Finished babe";
+
+        }
+        else{
+            Starting--;
+            document.querySelector(".time").inner = Start;
+        }
+       }
+        
+       
+        function Restart(){
+            clearTimeout(Interval);
+            
+            document.querySelector(".time").innerHTML = Starting;
+
+        }
+
+        function Pause(){
+
+
+        }
+        
+        
+    
+      </script>
+</body>
+</html>
