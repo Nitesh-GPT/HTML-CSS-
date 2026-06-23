@@ -7,41 +7,54 @@
     <link rel="stylesheet" href="Card.css">
 </head>
 <body>
-    <h1>Timer Clock</h1>
+    <div class="headre">
+        <h1>Timer Clock</h1>
+    </div>
+    
     <div class="container">
         
-        <div class="time"></div>
+        <div class="time">10</div>
+        <div class="btn">
         <button onclick="Start()">Start</button>
         <button onclick="Restart()">Restart</button>
         <button onclick="Pause()">Pause</button>
+        </div>
     </div>
     <script>
         let Starting = 10;
         let Interval;
         let truth = false;
-        Interval = setInterval(Start, 1000);
+        
 
        function Start (){
-        if(Starting <= 0){
+        clearInterval(Interval);
+        Interval = setInterval(() => {
+            if(Starting <= 0){
             clearInterval(Interval);
-            document.querySelector(".time").innerHTML="Finished babe";
+            document.querySelector(".time").innerHTML="Finished Babe!";
 
         }
         else{
             Starting--;
-            document.querySelector(".time").inner = Start;
+            document.querySelector(".time").innerHTML = Starting;
         }
+
+        }, 1000)
+        
        }
         
        
         function Restart(){
-            clearTimeout(Interval);
-            
+            //clearInterval(Interval);
+            Starting = 10;
             document.querySelector(".time").innerHTML = Starting;
+            
+            
 
         }
 
         function Pause(){
+            clearInterval(Interval);
 
 
         }
